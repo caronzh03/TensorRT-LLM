@@ -80,6 +80,7 @@ class TestBertForSequenceClassification(unittest.TestCase):
 
         tllm_model = BertForSequenceClassification(model_config).to(dtype).to(
             device)
+        # TODO(Caron): this is how HF weights -> tllm weights
         tllm_model.load_weights(hf_model.state_dict())
 
         # Prepare inputs

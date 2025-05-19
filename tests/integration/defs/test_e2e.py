@@ -2328,6 +2328,7 @@ def test_ptp_quickstart_bert(llm_root, llm_venv, model_name, model_path,
     ]
     model_dir = f"{llm_models_root()}/{model_path}"
     # NOTE: Bert model return logits for now
+    # TODO(Caron): LLM API with BERT
     sampling_param = SamplingParams(max_tokens=32, return_context_logits=True)
     with LLM(
             model=model_dir,
