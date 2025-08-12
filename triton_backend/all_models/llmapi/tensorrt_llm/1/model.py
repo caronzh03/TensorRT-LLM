@@ -549,7 +549,7 @@ class TritonPythonModel:
         ]
         # TODO(Caron): print the logits of the context instead of output.text for BERT
         # however CompletionOutput doesn't seem to have context_logits field
-        print(request_output.outputs[0].context_logits)
+        print(request_output.context_logits)
 
         response.append(
             pb_utils.Tensor("text_output",
